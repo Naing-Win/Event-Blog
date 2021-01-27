@@ -2,7 +2,7 @@
 Event blog by using spring boot, mysql, html, css, bootstrap, thymeleaf.
 
 # Project Description
-- Volunteer who is sharing knowledge about topic he has been registered
+- Volunteer who is sharing knoledge
 - Event registered
 
 
