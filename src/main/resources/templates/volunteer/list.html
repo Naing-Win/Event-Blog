@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/fragments :: head">
+</head>
+<body>
+	<div th:replace="common/fragments :: header"></div>
+	<div th:replace="common/fragments :: messages"></div>
+	<main class="container-fluid">
+		<!-- <div class="row">
+			<div class="col">
+				<a th:href="@{/volunteers/create}" class="btn btn-primary btn-sm"><i class="far fa-plus-square"></i></a>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Education</th>
+							<th>Phone Number</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="vol : ${volunteers}">
+							<td th:text="${vol.fullName}"></td>
+							<td th:text="${vol.education}"></td>
+							<td th:text="${vol.phoneNumber}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div> -->
+		<div class="row">
+	        <div class="col">
+	            <a th:href="@{/volunteers/create}" class="btn btn-success btn-sm mb-3" style="margin-left: 26%;"><i class="far fa-plus-square">-Create Volunteer</i></a>
+	        </div>
+    	</div>
+
+	    <div class="row">
+	        <div class="col" style="max-width: 50%; margin: auto;">
+	            <!-- <ul class="list-group">
+	                <li th:each="volunteer : ${volunteers}"
+	                    th:text="${volunteer.fullName}"
+	                    class="list-group-item"></li>
+	            </ul> -->
+	            <table class="table table-over">
+	            	<thead style="background: darkgray; color: white;">
+	            		<tr>
+	            			<th>Name</th>
+	            			<th>Education</th>
+	            			<th>Phone Number</th>
+	            		</tr>
+	            	</thead>
+	            	<tbody>
+	            		<tr th:each="vol : ${volunteers}">
+	            			<td th:text="${vol.fullName}"></td>
+	            			<td th:text="${vol.education}"></td>
+	            			<td th:text="${vol.phoneNumber}"></td>
+	            		</tr>
+	            	</tbody>
+	            </table>
+	        </div>
+	    </div>
+	</main>
+</body>
+</html>

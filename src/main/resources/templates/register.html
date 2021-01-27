@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/fragments :: head">
+</head>
+<body>
+	<div th:replace="common/fragments :: header"></div>
+	<div th:replace="common/fragments :: messages"></div>
+	
+	<main class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-8">
+				<!-- <form action="#" th:action="@{/register}" th:object="${userForm}" method="post">
+					<div class="form-group">
+						<label th:for="fullName">Full Name</label>
+						<input class="form-control" th:field="*{fullName}" required="required" placeholder="Enter your name.">
+						<div class="error" style="color: red;" th:errors="*{fullName}"></div>
+					</div>
+					<div class="form-group">
+						<label th:for="email">Email</label>
+						<input class="form-control" th:field="*{email}" required="required" placeholder="Enter your email address.">
+						<div class="error" style="color: red;" th:errors="*{email}"></div>
+					</div>
+					<div class="form-group">
+						<label th:for="password">Password</label>
+						<input class="form-control" th:field="*{password}" required="required" placeholder="Enter your password.">
+						<div class="error" style="color: red;" th:errors="*{password}"></div>
+					</div>
+					<div class="form-group">
+						<label th:for="verifyPassword">Verify Password</label>
+						<input class="form-control" th:field="*{verifyPassword}" required="required" placeholder="Enter your confirm password.">
+						<div class="error" style="color: red;" th:errors="*{verifyPassword}"></div>
+					</div>
+				
+					<input type="text" value="Register" class="btn btn-primary btn-sm">
+				</form> -->
+				<form method="post" th:action="@{/register}" th:object="${userForm}">
+	                <div class="form-group">
+	                    <label th:for="fullName">Full Name</label>
+	                    <input class="form-control" th:field="*{fullName}" required="required" />
+	                    <div class="error" th:errors="*{fullName}"></div>
+	                </div>
+	                <div class="form-group">
+	                    <label th:for="email">Email</label>
+	                    <input class="form-control" th:field="*{email}" required="required" />
+	                    <div class="error" style="color: red;"  th:errors="*{email}"></div>
+	                </div>
+	                <div class="form-group">
+	                    <label th:for="password">Password</label>
+	                    <input class="form-control" th:field="*{password}" type="password" required="required" />
+	                    <div class="error" th:errors="*{password}"></div>
+	                </div>
+	                <div class="form-group">
+	                    <label th:for="verifyPassword">Verify Password</label>
+	                    <input class="form-control" th:field="*{verifyPassword}" type="password" required="required" />
+	                    <div class="error" th:errors="*{verifyPassword}"></div>
+	                </div>
+	
+	                <input type="submit" value="Register" class="btn btn-primary btn-sm"/>
+            	</form>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

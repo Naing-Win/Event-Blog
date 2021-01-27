@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/fragments :: head">
+</head>
+<body>
+	<div th:replace="common/fragments :: header"></div>
+	<div th:replace="common/fragments :: messages"></div>
+	
+	<main th:if="${event}" class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<ul class="list-group mb-3">
+					<li class="list-group-item">
+						<h4>Volunteer Name</h4>
+						<p th:text="${event.volunteersFormatted}"></p>
+					</li>
+					<li class="list-group-item">
+						<h4>Event Title</h4>
+						<p th:text="${event.title}"></p>
+					</li>
+					<li class="list-group-item">
+						<h4>Description</h4>
+						<p th:text="${event.description}"></p>
+					</li>
+					<li class="list-group-item">
+						<h4>Location</h4>
+						<p th:text="${event.location}"></p>
+					</li>
+					<li class="list-group-item">
+						<h4>Date</h4>
+						<p th:text="${event.startDate}"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="row" style="margin-left: auto;">
+			<a class="btn btn-primary btn-sm" th:href="@{${'/events/update/'+event.uid}}"><i class="fas fa-edit"></i> Edit</a>
+			<form action="#" th:action="@{/events/delete/{uid}(uid=${event.uid})}" method="post">
+				<button type="submit" class="btn btn-danger btn-sm ml-2"><i class="far fa-trash-alt"></i> Delete</button>
+			</form>
+		</div>
+		
+		<!-- <div class="row">
+			<div class="col-8 offset-2 mx-auto">
+			<div class="card">
+			<div class="card-body">
+				<table>
+					<tr>
+						<th>Volunteer Name</th>
+						<td th:text="${event.volunteersFormatted}"></td>
+					</tr>
+					<tr>
+						<th>Event Title</th>
+						<td th:text="${event.title}"></td>
+					</tr>
+					<tr>
+						<th>Description</th>
+						<td th:text="${event.description}"></td>
+					</tr>
+					<tr>
+						<th>Location</th>
+						<td th:text="${event.location}"></td>
+					</tr>
+					<tr>
+						<th>Date</th>
+						<td th:text="${event.startDate}"></td>
+					</tr>
+				</table>
+				</div>
+				</div>
+			</div>
+		</div> -->
+	</main>
+</body>
+</html>
