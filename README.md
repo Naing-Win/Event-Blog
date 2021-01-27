@@ -1,8 +1,8 @@
 # Event-Blog
 Event blog by using spring boot, mysql, html, css, bootstrap, thymeleaf.
 
-# Description
-- Volunteer registered
+# Project Description
+- Volunteer who is sharing knowledge about topic he has been registered
 - Event registered
 
 
