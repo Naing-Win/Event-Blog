@@ -10,6 +10,7 @@ Event blog by using spring boot, mysql, html, css, bootstrap, thymeleaf.
 # Create Event
 ![create_e](https://user-images.githubusercontent.com/45649966/105964040-16534a80-60b0-11eb-97d9-cc1a1abb537d.PNG)
 #Update Event
+![u_e](https://user-images.githubusercontent.com/45649966/105964457-9b3e6400-60b0-11eb-8c7e-80cddcb88c0c.PNG)
 
 
 
